@@ -7,6 +7,13 @@ const data = require('./data.json');   //import data
 // define route and api
 
 
+// get data route
+app.get('/data',(req,res) => {
+  //  no auth for now 
+   res.send(data);
+})
+
+
 // login route  - get request
 app.get('/login/:id/:pass', (req,res) => {
     const id = parseInt(req.params.id);
