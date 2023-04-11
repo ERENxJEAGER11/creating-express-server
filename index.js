@@ -5,6 +5,9 @@ const port = 3000    //local port
 const data = require('./data.json');   //import data
 
 // define route and api
+
+
+// login route  - get request
 app.get('/login/:id/:pass', (req,res) => {
     const id = parseInt(req.params.id);
     const pass = req.params.pass === 'true';
@@ -21,8 +24,19 @@ app.get('/login/:id/:pass', (req,res) => {
     }
 })
 
-app.get('/SignUp', (req,res) => {
-    res.send("Hi aman , Sign up?")
+// sign-up route - post request
+
+app.post('/SignUp/:id/:name/:age/:gender/:comment/:rating/:pass', (req,res) => {
+  const person = {
+    id: req.params.id,
+    name: req.params.name,
+    age: req.params.age,
+    gender: req.params.gender,
+    comment: req.params.comment,
+    rating: req.params.rating,
+    pass: req.params.pass
+  }
+    res.send(person);
 })
 
 
