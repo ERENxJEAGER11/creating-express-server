@@ -10,7 +10,12 @@ const data = require('./data.json');   //import data
 // get data route
 app.get('/data',(req,res) => {
   //  no auth for now 
-   res.send(data);
+   if(req.body.admin = true) {
+    res.status(200).send(data);
+    }
+    else {
+      res.status(403).send('not authorized');
+    }
 })
 
 
