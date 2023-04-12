@@ -9,7 +9,7 @@ const data = require('./data.json');   //import data
 
 // get data route
 app.get('/data',(req,res) => {
-  //  no auth for now 
+  //  temp  auth for now 
    if(req.body.admin = true) {
     res.status(200).send(data);
     }
