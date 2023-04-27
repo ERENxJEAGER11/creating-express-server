@@ -1,6 +1,6 @@
 const express = require('express');  //import express
 const app = express();  // create an instance of express
-const port = 3000    //local port
+const port = 3001    //local port
 
 const data = require('./data.json');   //import data
 
@@ -10,7 +10,7 @@ const data = require('./data.json');   //import data
 // get data route
 app.get('/data',(req,res) => {
   //  temp  auth for now 
-   if(req.body.admin = true) {
+   if(true) {
     res.status(200).send(data);
     }
     else {
