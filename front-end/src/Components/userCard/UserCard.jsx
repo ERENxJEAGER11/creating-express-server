@@ -9,7 +9,7 @@ function UserCard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('localhost:3001/data');
+        const response = await fetch('http://localhost:3001/data');
         const json = await response.json();
         setData(json);
         setIsLoading(false);

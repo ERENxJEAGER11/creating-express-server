@@ -10,12 +10,7 @@ const data = require('./data.json');   //import data
 // get data route
 app.get('/data',(req,res) => {
   //  temp  auth for now 
-   if(true) {
-    res.status(200).send(data);
-    }
-    else {
-      res.status(403).send('not authorized');
-    }
+  res.status(200).send(data);
 })
 
 
